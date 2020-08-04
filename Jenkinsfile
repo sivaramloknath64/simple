@@ -5,7 +5,7 @@ pipeline {
    stages {
        stage('Git-Checkout') {
          steps {
-            git 'https://github.com/sivaramloknath64/sample.git'
+            git 'https://github.com/sivaramloknath64/Angular-5-Sample-Demo.git'
          }
       }
 	   stage('npm install package'){
@@ -22,11 +22,7 @@ pipeline {
                     }
                 }
                 
-         }
-      }    
+           
 	  
 }
 }
-
-
-
