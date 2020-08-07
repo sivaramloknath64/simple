@@ -12,10 +12,9 @@ pipeline {
      
 	   stage('npm install package'){
                 steps{
-                    sh label: 'master', script: '''
-                         npm install
+                    sh 'npm install'
                          
-                     '''
+                  
                     }
             }
                 stage('Build'){
