@@ -1,7 +1,6 @@
 pipeline {
    agent any
-   tools {nodejs "node"}
- 
+   
    stages {
        stage('Git-Checkout') {
          steps {
@@ -9,6 +8,15 @@ pipeline {
            
          }
       }
+     
+     tage('Build') {
+            steps {
+                nodejs(nodeJSInstallationName: 'Node 6.x', configId: '<config-file-provider-id>') {
+                    sh 'npm config ls'
+                }
+            }
+     
+     
 	   stage('npm install package'){
                 steps{
                     sh label: 'master', script: '''
